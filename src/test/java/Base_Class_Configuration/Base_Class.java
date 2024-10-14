@@ -86,11 +86,11 @@ public class Base_Class {
 	}
 	
 	//Creation of new folder
-	public boolean createFolder(String foldername) {				
+	public File createFolder(String foldername) {				
 	    String folderName=System.getProperty("user.dir")+foldername;
 	    File Folder=new File(folderName);
-	    boolean created = Folder.mkdirs();
-	    return created;
+	   // boolean created = Folder.mkdirs();
+	    return Folder;
 	}
 	
 
