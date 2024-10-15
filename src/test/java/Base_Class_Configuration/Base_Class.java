@@ -258,8 +258,8 @@ public class Base_Class {
 		 }
 		 
 	 //  Explicit wait Until Visible using locator
-		 public WebDriverWait WaitUntilVisibleLocator(String locator) {
-				WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
+		 public WebDriverWait WaitUntilVisibleLocator(String locator, int time) {
+				WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(time));
 				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
 				return wait;
 		 }
@@ -714,11 +714,12 @@ public class Base_Class {
 	   }
 
 	 //  Log for extent report implementation in both node and general   
-	 /*  public Logger info(String message) {
+	   public Logger infof(String message) {
 	          Logger log= Logger.getLogger(this.getClass());
 			  log.info(message);
+			  print(message);
 			  return log;
-	        }*/
+	        }
     
 //<-------------------------------------------------ScreenShots Calls-------------------------------------------------------------->  
     

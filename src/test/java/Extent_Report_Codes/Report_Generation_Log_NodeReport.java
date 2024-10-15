@@ -36,7 +36,7 @@ public class Report_Generation_Log_NodeReport extends TestListenerAdapter {
 	// folder creation
 	String folderName=System.getProperty("user.dir")+timeStamp;
     File Folder=new File(folderName);
-    boolean created = Folder.mkdirs();
+   // boolean created = Folder.mkdirs();
 	
 	public static String readMessagesFromFile(String filePath) {
         StringBuilder content = new StringBuilder();
